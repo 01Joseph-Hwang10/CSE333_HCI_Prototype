@@ -34,3 +34,13 @@
   width: 100%;
   object-fit: cover;
 }
+@keyframes toRight {
+  to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+
+::view-transition-old(root) {
+  animation: 0.5s toRight linear;
+}

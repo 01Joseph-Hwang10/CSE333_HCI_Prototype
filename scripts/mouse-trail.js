@@ -14,7 +14,7 @@ let mouse = {
   y: 0,
 };
 
-const MAX_SIZE = 50;
+const MAX_SIZE = 20;
 const MIN_SIZE = 10;
 
 /**
@@ -37,6 +37,7 @@ class Dot {
     node.style.position = "absolute";
     node.style.background = "red";
     node.style.zIndex = 100000;
+    node.style.opacity = 0.4;
     const body = document.querySelector("body");
     body.appendChild(node);
     return node;
