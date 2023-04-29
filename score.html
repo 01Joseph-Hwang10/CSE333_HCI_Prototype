@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI Prototype</title>
+    <link rel="stylesheet" href="assets/reset.css">
+    <style>
+        #top {
+            width: 100%;
+            object-fit: cover;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+        #scores {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+        #scores img {
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script src="scripts/mouse-trail.js" defer></script>
+    <script>
+        const goToIndex = () => {
+            window.location.assign("index.html");
+        }
+    </script>
+</head>
+<body>
+    <img onclick="goToIndex()" id="top" src="assets/top.png" />
+    <div id="scores">
+        <img src="assets/score-1.png" />
+        <img src="assets/score-2.png" />
+        <img src="assets/score-3.png" />
+    </div>
+</body>
+</html>
