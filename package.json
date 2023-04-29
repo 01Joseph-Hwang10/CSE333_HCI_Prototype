@@ -1,0 +1,9 @@
+{
+  "name": "hci-prototype",
+  "scripts": {
+    "serve": "browser-sync start --server --files *"
+  },
+  "dependencies": {
+    "browser-sync": "^2.29.1"
+  }
+}

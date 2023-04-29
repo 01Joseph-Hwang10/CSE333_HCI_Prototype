@@ -12,12 +12,16 @@
     <script src="scripts/score.js"></script>
 </head>
 <body>
-    <img onclick="goToIndex()" id="top" src="assets/top.png" />
+    <div id="top">
+        <img onclick="goToIndex()" src="assets/top.png" />
+        <div></div>
+    </div>
     <div id="scores">
         <img src="assets/score-1.png" />
         <img src="assets/score-2.png" />
         <img src="assets/score-3.png" />
     </div>
+    <div id="bottom"></div>
     <script>
         const goToIndex = () => {
             window.location.assign("index.html");

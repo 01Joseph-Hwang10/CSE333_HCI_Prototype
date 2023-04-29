@@ -1,8 +1,26 @@
 #top {
   width: 100%;
-  object-fit: cover;
   position: sticky;
   top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+#top img {
+  width: 100%;
+  object-fit: cover;
+}
+#top div {
+  width: 100%;
+  height: 5rem;
+}
+#bottom {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  bottom: 0;
   left: 0;
 }
 #scores {
