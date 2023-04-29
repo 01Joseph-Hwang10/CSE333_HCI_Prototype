@@ -121,3 +121,11 @@ function updateCursor(x, y) {
   mouse.x = x;
   mouse.y = y;
 }
+
+function attachMousemoveListener() {
+  window.addEventListener("mousemove", (event) => {
+    const pageX = event.pageX;
+    const pageY = event.pageY;
+    updateCursor(pageX, pageY);
+  });
+}

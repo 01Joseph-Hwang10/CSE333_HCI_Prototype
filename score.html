@@ -9,39 +9,7 @@
     <link rel="stylesheet" href="assets/score.css">
     <script src="scripts/mouse-trail.js" type="text/javascript"></script>
     <script src="scripts/webgazer.js" type="text/javascript"></script>
-    <script>
-        const removeWebgazerVideoContainer = async () => {
-            return new Promise((resolve) => {
-                const interval = setInterval(() => {
-                    const videoFeedback = document.querySelector('#webgazerVideoContainer');
-                    if (videoFeedback) {
-                        videoFeedback.style.display = 'none';
-                        clearInterval(interval);
-                        resolve();
-                    }
-                }, 100);
-            })
-        }
-        const initialize = async () => {
-            webgazer.setGazeListener(function(data, elapsedTime) {
-                if (data == null) {
-                    return;
-                }
-                let xprediction = data.x;
-                let yprediction = data.y;
-                updateCursor(xprediction, yprediction)
-            }).begin();
-            await removeWebgazerVideoContainer();
-            populateDots();
-            animate();
-        }
-        const everythingLoaded = setInterval(() => {
-            if (document.readyState === "complete") {
-                clearInterval(everythingLoaded);
-                initialize();
-            }
-        }, 100);
-    </script>
+    <script src="scripts/score.js"></script>
 </head>
 <body>
     <img onclick="goToIndex()" id="top" src="assets/top.png" />
