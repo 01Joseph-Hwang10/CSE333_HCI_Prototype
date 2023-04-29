@@ -66,10 +66,14 @@ class Dot {
 const DELAY_RATE = 0.8;
 const N_DOTS = 24;
 
-// Creates the Dot objects, populates the dots array
-for (let i = 0; i < N_DOTS; i++) {
-  const dot = new Dot();
-  dots.push(dot);
+/**
+ * Creates the Dot objects, populates the dots array
+ */
+function populateDots() {
+  for (let i = 0; i < N_DOTS; i++) {
+    const dot = new Dot();
+    dots.push(dot);
+  }
 }
 
 /**
@@ -106,12 +110,6 @@ function draw() {
   });
 }
 
-addEventListener("mousemove", function (event) {
-  //event.preventDefault();
-  mouse.x = event.pageX;
-  mouse.y = event.pageY;
-});
-
 // animate() calls draw() then recursively calls itself
 // everytime the screen repaints via requestAnimationFrame().
 function animate() {
@@ -119,5 +117,7 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-// And get it started by calling animate().
-animate();
+function updateCursor(x, y) {
+  mouse.x = x;
+  mouse.y = y;
+}
