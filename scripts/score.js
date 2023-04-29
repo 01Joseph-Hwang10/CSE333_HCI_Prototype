@@ -20,7 +20,7 @@ const attachScrollListener = () => {
   // Scroll to up when the mouse cursor is inside the top div
   top.addEventListener("mouseenter", () => {
     window.scrollBy({
-      top: -500,
+      top: -150,
       behavior: "smooth",
     });
   });
@@ -29,7 +29,7 @@ const attachScrollListener = () => {
   // Scroll to down when the mouse cursor is inside the bottom div
   bottom.addEventListener("mouseenter", () => {
     window.scrollBy({
-      top: 500,
+      top: 150,
       behavior: "smooth",
     });
   });
