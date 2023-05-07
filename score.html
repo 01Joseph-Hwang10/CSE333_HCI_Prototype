@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/score.css">
     <script src="scripts/mouse-trail.js" type="text/javascript"></script>
-    <script src="scripts/webgazer.js" type="text/javascript"></script>
+    <!-- <script src="scripts/webgazer.js" type="text/javascript"></script> -->
     <script src="scripts/score.js"></script>
 </head>
 <body>
-    <div id="top">
+    <div id="top" class="container">
         <img onclick="goToIndex()" src="assets/top.png" />
-        <div></div>
+        <div class="scroll-trigger"></div>
     </div>
-    <div id="scores">
+    <div id="scores" class="container">
         <img src="assets/score-1.png" />
         <img src="assets/score-2.png" />
         <img src="assets/score-3.png" />
     </div>
-    <div id="bottom"></div>
+    <div id="bottom" class="container">
+        <div class="scroll-trigger"></div>
+    </div>
     <script>
         const goToIndex = () => {
             window.location.assign("index.html");

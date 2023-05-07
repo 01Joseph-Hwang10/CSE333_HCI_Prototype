@@ -15,21 +15,28 @@ const attachGazeListener = async () => {
     .begin();
 };
 
+const wait = (ms) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
+const SCROLL_AMOUNT = 150; // px
+const SCROLL_DELAY = 1 * 1000; // 1s
+
 const attachScrollListener = () => {
   const top = document.querySelector("#top");
   // Scroll to up when the mouse cursor is inside the top div
-  top.addEventListener("mouseenter", () => {
+  top.addEventListener("mouseenter", async () => {
     window.scrollBy({
-      top: -150,
+      top: -SCROLL_AMOUNT,
       behavior: "smooth",
     });
   });
 
   const bottom = document.querySelector("#bottom");
   // Scroll to down when the mouse cursor is inside the bottom div
-  bottom.addEventListener("mouseenter", () => {
+  bottom.addEventListener("mouseenter", async () => {
     window.scrollBy({
-      top: 150,
+      top: SCROLL_AMOUNT,
       behavior: "smooth",
     });
   });
@@ -38,7 +45,7 @@ const attachScrollListener = () => {
 const initialize = async () => {
   // await attachGazeListener();
   attachMousemoveListener();
-  attachScrollListener();
+  // attachScrollListener();
   populateDots();
   animate();
   window.onbeforeunload = function () {
