@@ -2,8 +2,8 @@
     "theme_color": "#577aef",
     "background_color": "#ffffff",
     "display": "standalone",
-    "scope": "/",
-    "start_url": "/",
+    "scope": "/hci-prototype/",
+    "start_url": "/hci-prototype/",
     "name": "HCI Prototype",
     "short_name": "HCI Prototype",
     "icons": [
