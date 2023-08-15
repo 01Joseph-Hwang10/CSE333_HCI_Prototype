@@ -11,6 +11,7 @@ UNIST CSE333 Introduction to Human-Computer Interaction 을 수강하며 제작�
 
 # Showcase
 
+![Untitled](https://github.com/01Joseph-Hwang10/CSE333_HCI_Prototype/assets/72839543/507e5ec7-3148-4048-badf-06e829dba963)
 
 
 # Background
